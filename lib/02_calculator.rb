@@ -1,77 +1,87 @@
-def input0
-	puts "Entre ton 1er nombre : "
-	input1 = gets.chomp.to_i
-	return input1
-end
+# DEBUT INPUT ***************
+#
 
-def input1
-	puts "Entre ton 2e nombre : "
-	input2 = gets.chomp.to_i
-	return input2
-end
+	input1 = gets.chomp.to_f
+	input2 = gets.chomp.to_f
+	yu = gets.chomp.to_i
 
+
+# FIN INPUT
+#
+#
+#
+## DEBUT ADD ***************
+#
 def add(input1, input2)
-	puts "La somme des deux nombres est : #{input1 + input2}"
-	return input1 + input2
+	add = (input1 + input2)
 end
 
+# FIN INPUT
+#
+#
+## DEBUT SUBTRACT ***************
+#
 def subtract(input1, input2)
-	puts "La soustraction des deux nombres est : #{input1 - input2}"
-	return input1 - input2
+	subtract = (input1 - input2)
 end
 
-def sum(input1, input2)
-	a = []
-	a << input1 + input2
-	puts "La somme de l'Array est : #{a.sum}"
-	return a.sum
+# FIN SUBTRACT
+#
+#
+## DEBUT SUM ***************
+#
+#
+def sum(lst = [])
+	return lst.sum
 end
 
+# FIN SUM
+#
+#
+## DEBUT MULTIPLY ***************
+#
 def multiply(input1, input2)
-	puts "La multiplication des deux nombres est : #{input1*input2}"
-	return input1 * input2
+
+	multiply =  (input1 * input2)
 end
 
+# FIN MULTIPLY
+#
+#
+## DEBUT CARRE ***************
+#
 def carre(input1)
-	puts "La multiplication des deux nombres est : #{input1*input1}"
-	return input1 * input1
+	carre =  (input1 * input1)
 end
 
-def facto(input1)
+
+## FIN CARRE
+#
+#
+## DEBUT FACTO ***************
+#
+#
+
+
+def facto(yu)
+	factorial = [yu]
+	if yu == 0
+		 return 1
+	else
+		while yu - 1 >= 1
+		factorial << (yu - 1)
+		yu -= 1
+		end
+	 return factorial.inject(:*)
+		
+	end
+	 
 end
 
-def perform
-	add(input0, input1)
-	add(input0, input1)
-	add(input0, input1)
-
-	subtract(input0, input1)
-
-	sum(input0, input1)
-	sum(input0, input1)
-	sum(input0, input1)
-	sum(input0, input1)
-
-	multiply(input0, input1)
-	multiply(input0, input1)
-	multiply(input0, input1)
-
-	carre(input0)
-	carre(input0)
-	carre(input0)
-	carre(input0)
-	carre(input0)
-
-	facto(input1)
-	facto(input1)
-	facto(input1)
-	facto(input1)
-	facto(input1)
-end
-
-perform
 
 
-
+## FIN FACTO
+#
+#
 
 

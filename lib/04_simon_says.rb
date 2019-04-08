@@ -25,7 +25,6 @@ end
 # DEBUT REPEAT *******
 #
 #
-## PAS FINI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 def input2
 	b = gets.chomp.to_i
@@ -34,21 +33,20 @@ end
 
 
 
-def repeat(a, b= 1)
-	if b = 1
-		return "#{a + " " + a}"
-	end
-	if b <= 2
-		return "#{a + " " + a + " " + a}"
-	end
+def repeat(a, b= 2)
+	lst = []
+	(1..b).each { lst.push(a)}
+	lst.join(" ")
 end
 
-	#if b != nil 
-	#	return "#{b.times} * #{a}"
-	#else
-	#	return "#{a + b}"
-	#end
 
+	# AUTRE METHODE
+	#if b = 1
+		#	return "#{a + " " + a}"
+	#	end
+	#	if b = 2
+	#		return "#{a + " " + a + " " + a}"
+	#	end
 	
 
 # FIN REPEAT *******
@@ -70,12 +68,35 @@ end
 # DEBUT FIRST WORD *******
 #
 
-def first_word(a, b)
-	
+def first_word(a)
+	a = a.split(" ")
+	return a[0]
 end
 
 
 # FIN FIRST WORD *******
+#
+
+# DEBUT TITLEIZE  *******
+# 
+
+def titleize(a)
+	a.split.map(&:capitalize).join(" ")
+	
+end
+
+#SOLUTION TITLEIZE:
+#def titleize(str)
+  #little_words = %w(a an and the end Over)
+  #str.capitalize.gsub(/\w+/) do |word|
+      #little_words.include?(word) ? word : word.capitalize
+  #end
+#end
+#
+
+
+
+# FIN TITLEIZE *******
 #
 
 # PERFORM *******
@@ -86,6 +107,8 @@ def perform
 	shout(input1)
 	repeat(input1, input2)
 	start_of_word(input1, input2)
+	first_word(input1)
+	titleize(input1)
 end
 perform
 
@@ -93,9 +116,8 @@ perform
 # PERFORM *******
 #
 #
-#
-#
-#
-#
-#
-#
+
+
+
+
+

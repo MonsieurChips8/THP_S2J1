@@ -1,23 +1,18 @@
-def input0
-	puts "Entre ton 1er nombre : "
-	input1 = gets.chomp.to_i
-	return input1
+yu = gets.chomp.to_i
+
+
+def facto(yu)
+	factorial = [yu]
+	if yu == 0
+		 puts 1
+	else
+		while yu - 1 >= 1
+		factorial << (yu - 1)
+		yu -= 1
+		end
+	 puts "#{factorial.inject(:*)}"
+		
+	end
+	 
 end
-
-def input1
-	puts "Entre ton 2e nombre : "
-	input2 = gets.chomp.to_i
-	return input2
-
-def sum(input1, input2)
-	a = [0] << input1 + input2
-	puts a.inspect
-	return a.sum
-end
-
-
-def perform
-	sum(input0)
-end
-
-perform
+facto(yu)
